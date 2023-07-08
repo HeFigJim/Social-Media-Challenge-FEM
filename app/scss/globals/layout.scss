@@ -1,0 +1,15 @@
+@use "../util" as *;
+
+.container {
+  padding: 0 rem(25);
+  margin: 0 rem(46);
+
+  @include breakpoint-down(large) {
+    padding: 0;
+  }
+}
+
+footer {
+  margin: rem(24);
+  text-align: center;
+}
