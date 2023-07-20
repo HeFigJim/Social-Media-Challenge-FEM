@@ -62,7 +62,12 @@ function watchTask() {
  * Push build to gh-pages
  */
 gulp.task("deploy", function () {
-  return gulp.src("./dist/**/*").pipe(deploy());
+  return gulp.src("./prod/**/*").pipe(
+    deploy({
+      remoteUrl: "https://github.com/HeFigJim/HeFigJim.github.io.git",
+      branch: "master",
+    })
+  );
 });
 
 // Default Gulp Task
